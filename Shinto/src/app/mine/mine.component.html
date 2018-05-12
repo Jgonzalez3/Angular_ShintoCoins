@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>{{title}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10">
+      <h5>Here you can mine ShintoCoins by being the first to solve the algorithim:</h5><br>
+      <h5>{{algo.question}}?</h5>
+      <h6 class="text-success" *ngIf="algo.answer == answer">Correct Now Mine Your Coin</h6>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-6">
+        <form class="form-inline" (submit)="Answer()">
+        <input class="col-md-6 form-control" type="number" name="answer" [(ngModel)]="answer" placeholder="number" required>
+        <button class="col-sm-2 btn btn-secondary" type="submit">Mine</button>
+      </form>
+      </div>
+  </div>
+</div>

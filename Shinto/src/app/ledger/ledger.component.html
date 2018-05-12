@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>{{title}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h4>Here you can browse all ShintoCoin transactions</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 border border-warning" style="padding: 0">
+      <div class="alert-secondary text-dark text-center"><strong class="h4">ShintoCoin Ledger</strong></div>
+      <table class="table table-hover" style="margin: 0">
+        <thead>
+          <th><strong>Action</strong></th>
+          <th><strong>Amount</strong></th>
+          <th><strong>Value</strong></th>
+          <th></th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let x of ledger">
+            <td>{{x.action}}</td>
+            <td>{{x.amount}}</td>
+            <td>{{x.value}}</td>
+            <td><button class="btn btn-sm btn-secondary" routerLink ="/Transaction/{{x.transId}}">Details</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
